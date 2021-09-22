@@ -45,3 +45,17 @@ You can find my first's scripts.
 
 14-copy_html
 	Create a copy of all HTML files from the current working directory to the parent of the working directory, but never overwriting files exist in the parent of the working directory
+
+100-lets_move
+	Move all files beginning with an uppercase letter to the directory /tmp/u
+
+101-clean_emacs
+	Delete all files in the current working directory that end with the character ~
+
+102-tree
+	Create a tree directories named : welcome/to/school
+
+103-commas
+	Print the content of your current directory include hidden files, separate with commas and append / to directories
+
+
