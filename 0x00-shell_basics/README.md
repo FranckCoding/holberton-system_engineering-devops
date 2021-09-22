@@ -12,3 +12,6 @@ You can find my first's scripts.
 
 3-listfiles
 	Print the content of your current directory in a long format
+
+4-listmorefiles
+	Print the content of your current directory in a long format and include hidden files
