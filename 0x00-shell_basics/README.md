@@ -6,3 +6,6 @@ You can find my first's scripts.
 
 1-listit
 	Print the contents of your current directory
+
+2-Bring_me_home
+	Change the current working directory to the user's home directory
