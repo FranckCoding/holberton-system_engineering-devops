@@ -15,3 +15,6 @@ You can find my first's scripts.
 
 4-listmorefiles
 	Print the content of your current directory in a long format and include hidden files
+
+5-listfilesdigitonly
+	Print the content of your current directory in a long format, include hidden files and show the user and group IDs
