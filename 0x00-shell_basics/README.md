@@ -3,3 +3,6 @@ You can find my first's scripts.
 
 0-current_working_directory
 	Print the absolute path name of the current working directory
+
+1-listit
+	Print the contents of your current directory
