@@ -41,3 +41,15 @@ This is the directory of the shell permissions project. You can find scripts for
 
 13-change_group
 	Change the groupe owner to school for the file hello
+
+100-change_owner_and_group
+	Change the owner to vincent and the group owner to staff for all the files and directories in the working directory
+
+101-symbolic_link_permissions
+	Change the owner and the group owner of _hello to vincent and staff
+
+102-if_only
+	Change the owner of the file hello to vincent only if it is owned by the user guillaume
+
+103-Star_Wars
+	Play the StarWars IV episode in the terminal
