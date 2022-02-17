@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# displays the content of the current directory without the dash
+for content in *; do
+    echo "$content" | cut -d'-' -f2
+done
