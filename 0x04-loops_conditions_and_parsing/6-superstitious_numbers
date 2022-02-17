@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times, but in the 9th the shell say Hi
+# Display numbers starting at 1 to 20. 4, 9 and 17 have specials cases
 i=1
 while [ $i -ne 21 ]; do
     case $i in

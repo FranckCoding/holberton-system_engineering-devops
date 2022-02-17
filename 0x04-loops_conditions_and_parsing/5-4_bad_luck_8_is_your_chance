@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times, but in the 9th the shell say Hi
+# This script is displaying "Best School" 8 times, in 4th display "bad luck" and in 8th display "good luck"
 i=0
 while [ $i -ne 10 ]; do
     if [ $i -eq 3 ]
