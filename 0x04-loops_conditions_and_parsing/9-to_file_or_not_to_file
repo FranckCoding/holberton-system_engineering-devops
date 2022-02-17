@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# displays the content of the current directory without the dash
+# displays the informations for a school file
 if test -e "school"
 then
     echo "school file exists"
