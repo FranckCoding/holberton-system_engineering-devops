@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Web servers are the piece of software generating and serving HTML pages, let’s install one!
+apt-get update
+apt-get install -y nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/404_error.html
+sed -i '/listen \[::\]:80 default_server;/a \\n\trewrite ^/redirect_me / permanent;' /etc/nginx/sites-enabled/default
+sed -i '/listen \[::\]:80 default_server;/a \\n\terror_page 404 /404_error.html;' /etc/nginx/sites-enabled/default
+service nginx restart
