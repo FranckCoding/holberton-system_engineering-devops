@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Web servers are the piece of software generating and serving HTML pages, let’s install one!
+# Change the port listening of the nginx server by port 80.
 sed -i 's/listen 8080/listen 80/g' /etc/nginx/sites-enabled/default
 sed -i 's/listen \[::\]:8080/listen \[::\]:80/g' /etc/nginx/sites-enabled/default
 service nginx restart
