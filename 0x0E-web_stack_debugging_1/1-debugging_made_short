@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Change the port listening of the nginx server by port 80 and not running.
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -o nginx
