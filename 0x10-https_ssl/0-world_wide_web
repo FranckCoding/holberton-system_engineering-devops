@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# display information about subdomains.
+if [ "$#" -eq 1 ]
+then
+    IPDOMAIN=$(dig www."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $5 }')
+    TYPEDOMAIN=$(dig www."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $4 }')
+    echo "The subdomain www is a $TYPEDOMAIN record and points to $IPDOMAIN"
+
+    IPDOMAIN=$(dig lb-01."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $5 }')
+    TYPEDOMAIN=$(dig lb-01."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $4 }')
+    echo "The subdomain lb-01 is a $TYPEDOMAIN record and points to $IPDOMAIN"
+
+    IPDOMAIN=$(dig web-01."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $5 }')
+    TYPEDOMAIN=$(dig web-01."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $4 }')
+    echo "The subdomain web-01 is a $TYPEDOMAIN record and points to $IPDOMAIN"
+
+    IPDOMAIN=$(dig web-02."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $5 }')
+    TYPEDOMAIN=$(dig web-02."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $4 }')
+    echo "The subdomain web-02 is a $TYPEDOMAIN record and points to $IPDOMAIN"
+elif [ "$#" -eq 2 ]
+then
+    IPDOMAIN=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $5 }')
+    TYPEDOMAIN=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{ print $4 }')
+    echo "The subdomain $2 is a $TYPEDOMAIN record and points to $IPDOMAIN"
+fi
