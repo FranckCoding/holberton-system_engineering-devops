@@ -4,9 +4,9 @@ Records all tasks that are owned by this employee
 '''
 
 
+import csv
 import requests
 from sys import argv
-import csv
 
 url = "https://jsonplaceholder.typicode.com/users"
 

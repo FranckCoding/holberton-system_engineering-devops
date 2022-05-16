@@ -4,8 +4,8 @@ Records all tasks that are owned by this employee
 '''
 
 
-import requests
 import json
+import requests
 
 url = "https://jsonplaceholder.typicode.com/users"
 
