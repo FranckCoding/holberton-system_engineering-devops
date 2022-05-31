@@ -14,7 +14,7 @@ def number_of_subscribers(subreddit):
     the function should return 0
     """
     response = requests.get(f"https://www.reddit.com/r/{subreddit}/about.json",
-                            headers= {'User-agent': 'Wololo'})
+                            headers={'User-agent': 'Wololo'})
     if response is None or response.status_code != 200:
         return 0
 
