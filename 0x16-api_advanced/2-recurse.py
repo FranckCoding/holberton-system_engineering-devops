@@ -16,7 +16,8 @@ def recurse(subreddit, hot_list=[], after=''):
     if after is None:
         return
 
-    response = requests.get(f"https://www.reddit.com/r/{subreddit}/hot.json",
+    response = requests.get("https://www.reddit.com/r/{}/hot.json".format(
+        subreddit),
                             headers={'User-agent': 'Wololo'},
                             params={'after': after})
     if response is None or response.status_code != 200:
